@@ -1,0 +1,71 @@
+USE [DSTRAINING]
+GO
+/****** Object:  StoredProcedure [dbo].[BLD_WRK_CustomerList]    Script Date: 2020-05-27 9:47:09 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[BLD_WRK_CustomerList]
+-- =============================================
+-- Author:		Matheus Henrique Schaly
+-- Create date: 20200527
+-- Description:	RAW -> WRK
+-- =============================================
+
+AS
+BEGIN
+
+-- =============================================
+-- DROP TABLE
+-- =============================================
+IF OBJECT_ID('WRK_CustomerList') IS NOT NULL
+DROP TABLE [WRK_CustomerList]
+
+-- =============================================
+-- CREATE TABLE
+-- =============================================
+CREATE TABLE [WRK_CustomerList]
+(
+	[RowNumber]		INT IDENTITY(1,1)
+	,[Customer ID]	VARCHAR(1000)
+	,[City]			VARCHAR(200)
+	,[ZipCode]		VARCHAR(5)
+	,[Gender]		VARCHAR(1)
+	,[Age]			FLOAT
+)
+
+-- =============================================
+-- TRUNCATE TABLE
+-- =============================================
+TRUNCATE TABLE [WRK_CustomerList]
+
+-- =============================================
+-- INSERT INTO
+-- =============================================
+INSERT INTO [WRK_CustomerList]
+(
+	[Customer ID]
+	,[City]
+	,[ZipCode]
+	,[Gender]
+	,[Age]
+)
+SELECT 
+	RIGHT('0000000'+[Customer ID], 7)
+	,[City]
+	,[ZipCode]
+	,[Gender]
+	,[Age]
+FROM [dbo].[RAW_CustomerList]
+--(43 rows affected)
+
+END
+
+/*
+SELECT * 
+FROM [dbo].[WRK_CustomerList]
+
+SELECT * 
+FROM [dbo].[RAW_CustomerList]
+*/
