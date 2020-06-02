@@ -1,0 +1,80 @@
+USE [DSTRAINING]
+GO
+/****** Object:  StoredProcedure [dbo].[zzz_Backup_BLD_WRK_TransactionalData_20200527]    Script Date: 2020-05-27 9:47:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[zzz_Backup_BLD_WRK_TransactionalData_20200527]
+-- =============================================
+-- Author:		Matheus Henrique Schaly
+-- Create date: 20200527
+-- Description:	RAW -> WRK
+-- =============================================
+
+AS
+BEGIN
+
+-- =============================================
+-- DROP TABLE
+-- =============================================
+IF OBJECT_ID('WRK_TransactionalData') IS NOT NULL
+DROP TABLE [WRK_TransactionalData]
+
+-- =============================================
+-- CREATE TABLE
+-- =============================================
+CREATE TABLE [WRK_TransactionalData]
+(
+	[RowNumber]		INT IDENTITY(1,1)
+	,[Order ID]		VARCHAR(100)
+	,[Order Date]	DATE
+	,[Customer ID]	VARCHAR(1000)
+	,[Region]		VARCHAR(1)
+	,[Rep]			VARCHAR(100)
+	,[Item]			VARCHAR(1000)
+	,[Units]		INT
+	,[Unit Price]	FLOAT
+)
+
+-- =============================================
+-- TRUNCATE TABLE
+-- =============================================
+TRUNCATE TABLE [WRK_TransactionalData]
+
+-- =============================================
+-- INSERT INTO
+-- =============================================
+INSERT INTO [WRK_TransactionalData]
+(
+	[Order ID]		
+	,[Order Date]	
+	,[Customer ID]	
+	,[Region]		
+	,[Rep]			
+	,[Item]			
+	,[Units]		
+	,[Unit Price]	
+)
+SELECT 
+	[Order ID]		
+	,[Order Date]
+	,[Customer ID]	
+	,[Region]		
+	,[Rep]			
+	,[Item]			
+	,[Units]
+	,[Unit Price]	
+FROM [dbo].[RAW_TransactionalData]
+--(43 rows affected)
+
+END
+
+/*
+SELECT * 
+FROM [dbo].[WRK_TransactionalData]
+
+SELECT * 
+FROM [dbo].[RAW_TransactionalData]
+*/
