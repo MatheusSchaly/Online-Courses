@@ -1,0 +1,882 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/31/2020 2:41:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-AGQ1EUJ"
+  DTS:CreatorName="DESKTOP-AGQ1EUJ\Matheus_Schaly"
+  DTS:DTSID="{BF021A5D-2119-4C9A-8918-E882CC76F84E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="4105"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{9E4075EC-CC1F-4636-8D88-1432E6A35BD3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-AGQ1EUJ\SQLEXPRESS.DSTRAINING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{18231807-45C4-48BA-8756-5D544939C17C}"
+      DTS:ObjectName="DESKTOP-AGQ1EUJ\SQLEXPRESS.DSTRAINING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-AGQ1EUJ\SQLEXPRESS;Initial Catalog=DSTRAINING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9EEB263D-12C5-477E-8386-9A172AA8508C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Matheus_Schaly\Documents\Courses\Data_Science_A-Z\Part_3_Data_Preparation\20200531_NamesCanada\3_Uploaded_Data\20200531\FakeNamesCanada.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number"
+              DTS:DTSID="{14A98432-D146-4561-BDE8-F5B4806A6680}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{55FC69BD-A4C7-43AF-B1E2-4EE00F2D4968}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GivenName"
+              DTS:DTSID="{3E24942A-9645-474F-A86E-57CF6C6312A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Surname"
+              DTS:DTSID="{CC1CF172-7C54-45A8-AB4C-231860C93BB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreetAddress"
+              DTS:DTSID="{A968A6F0-0E49-4858-88D9-6D2944EC433F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{CDD31CC6-6A64-4A75-819C-54B163BCC873}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ZipCode"
+              DTS:DTSID="{B11AF789-3AF3-44F5-96CB-02350B4A853A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountryFull"
+              DTS:DTSID="{3102370B-B857-4591-A56F-A81C73219E52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Birthday"
+              DTS:DTSID="{12DED201-0FF0-4C51-ACF8-6C8C48572965}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Balance"
+              DTS:DTSID="{9FCE83B0-E67E-443D-8A3A-1B9B0A7DD012}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InterestRate"
+              DTS:DTSID="{8DD27EE5-A97F-4563-89D2-C401B187F31B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\20200531_NamesCanada"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A7041A47-1BDD-4EBA-BFB0-5C0B657B295E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="20200531_NamesCanada"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\20200531_NamesCanada\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="4105"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\20200531_NamesCanada\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Number]"
+                      name="Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[GivenName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GivenName]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[GivenName]"
+                      name="GivenName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Surname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Surname]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Surname]"
+                      name="Surname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[StreetAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreetAddress]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[StreetAddress]"
+                      name="StreetAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ZipCode]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]"
+                      name="ZipCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[CountryFull]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountryFull]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[CountryFull]"
+                      name="CountryFull"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Birthday]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Birthday]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Birthday]"
+                      name="Birthday"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]"
+                      name="Balance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[InterestRate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InterestRate]"
+                      length="1000"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[InterestRate]"
+                      name="InterestRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Number" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GivenName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="GivenName" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Surname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Surname" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StreetAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="StreetAddress" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="ZipCode" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountryFull]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="CountryFull" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Birthday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Balance" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InterestRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="InterestRate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\20200531_NamesCanada\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[RAW_NamesCanada_20200531]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\20200531_NamesCanada\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-AGQ1EUJ\SQLEXPRESS.DSTRAINING]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-AGQ1EUJ\SQLEXPRESS.DSTRAINING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Number"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Number]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GivenName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="GivenName"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GivenName]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[GivenName]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Surname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Surname"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Surname]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Surname]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreetAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="StreetAddress"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetAddress]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[StreetAddress]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ZipCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="ZipCode"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZipCode]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[ZipCode]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountryFull]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="CountryFull"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryFull]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[CountryFull]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Birthday]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Birthday"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Balance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Balance"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Balance]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]" />
+                    <inputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InterestRate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="InterestRate"
+                      externalMetadataColumnId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestRate]"
+                      lineageId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output].Columns[InterestRate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RowNumber]"
+                      dataType="i4"
+                      name="RowNumber" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Number" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GivenName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="GivenName" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Surname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Surname" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="StreetAddress" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="ZipCode" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryFull]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="CountryFull" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Balance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="Balance" />
+                    <externalMetadataColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InterestRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1000"
+                      name="InterestRate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\20200531_NamesCanada\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\20200531_NamesCanada\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\20200531_NamesCanada\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\20200531_NamesCanada\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\20200531_NamesCanada.Paths[Flat File Source Output]"
+              endId="Package\20200531_NamesCanada\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\20200531_NamesCanada\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="199,42"
+          Id="Package\20200531_NamesCanada"
+          TopLeft="245,113" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\20200531_NamesCanada">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\20200531_NamesCanada\Flat File Source"
+          TopLeft="322,109" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\20200531_NamesCanada\OLE DB Destination"
+          TopLeft="313,336" />
+        <EdgeLayout
+          Id="Package\20200531_NamesCanada.Paths[Flat File Source Output]"
+          TopLeft="398,151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,185"
+              Start="0,0"
+              End="0,177.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,177.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\20200531_NamesCanada\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

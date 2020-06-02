@@ -1,0 +1,13 @@
+SELECT *
+FROM [RAW_VehiclesCompany_20200601]
+WHERE ISNUMERIC([2015]) = 0
+AND [2015] <> ''
+
+SELECT CustomerID, COUNT([CustomerID])
+FROM [WRK_VehiclesCompany]
+GROUP BY [CustomerID]
+HAVING COUNT([CustomerID]) > 1
+
+SELECT *
+FROM [WRK_VehiclesCompany]
+WHERE [CustomerID] = '3490750'

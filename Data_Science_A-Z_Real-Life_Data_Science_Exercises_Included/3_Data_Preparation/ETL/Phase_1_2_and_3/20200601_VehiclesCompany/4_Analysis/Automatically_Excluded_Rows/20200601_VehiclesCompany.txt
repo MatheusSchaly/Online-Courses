@@ -1,0 +1,2 @@
+"CustomerID","CustomerSince","Vehicle","2014","2015","2016E","Column 6"
+"2738818","2014-01-01","2009 Chevrolet Traverse","118.00","1.00","122.55","725.89"

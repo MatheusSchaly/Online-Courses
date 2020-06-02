@@ -1,0 +1,107 @@
+USE [DSTRAINING]
+GO
+/****** Object:  StoredProcedure [dbo].[BLD_WRK_VehiclesCompany]    Script Date: 2020-06-01 7:14:13 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[BLD_WRK_VehiclesCompany]
+-- =============================================
+-- Author:		Matheus Henrique Schaly
+-- Create date: 20200601
+-- Description:	RAW -> WRK
+-- Mod date:
+-- =============================================
+
+AS
+BEGIN
+
+-- =============================================
+-- DROP TABLE
+-- =============================================
+IF OBJECT_ID('WRK_VehiclesCompany') IS NOT NULL
+DROP TABLE [WRK_VehiclesCompany]
+
+-- =============================================
+-- CREATE TABLE
+-- =============================================
+
+CREATE TABLE [WRK_VehiclesCompany]
+(
+	[RowNumber]			INT IDENTITY(1,1)
+	,[CustomerID]		VARCHAR(100)
+	,[CustomerSince]	DATE
+	,[Vehicle]			VARCHAR(1000)
+	,[2014]				FLOAT
+	,[2015]				FLOAT
+	,[2016E]			FLOAT
+)
+
+-- =============================================
+-- TRUNCATE TABLE
+-- =============================================
+TRUNCATE TABLE [WRK_VehiclesCompany]
+
+-- =============================================
+-- INSERT INTO
+-- =============================================
+INSERT INTO [WRK_VehiclesCompany]
+(
+	[CustomerID]
+	,[CustomerSince]
+	,[Vehicle]
+	,[2014]
+	,[2015]
+	,[2016E]
+)
+SELECT
+    [CustomerID]
+    ,[CustomerSince]
+    ,[Vehicle]
+    ,[2014]
+    ,[2015]
+    ,[2016E]
+FROM [RAW_VehiclesCompany_20200601]
+-- (1049998 rows affected)
+WHERE ISNUMERIC([2015]) = 1
+OR [2015] = '' -- 1 ROW DELETED
+-- 1049998 + 1 = 1049999 VERIFIED
+
+-- =============================================
+-- ADDITIONAL CHECKS
+-- =============================================
+DELETE
+FROM [WRK_VehiclesCompany]
+WHERE [CustomerSince] < '1965-01-01' -- 1 ROW DELETED
+
+DELETE
+FROM [WRK_VehiclesCompany]
+WHERE [CustomerID] = '3490750' -- 2 ROWS DELETED
+
+SELECT *
+FROM [WRK_VehiclesCompany]
+WHERE [CustomerSince] > '2016-01-01' -- N/A
+
+SELECT *
+FROM [WRK_VehiclesCompany]
+WHERE [2014] < 0
+OR [2015] < 0
+OR [2016E] < 0 -- N/A
+
+
+END
+
+/*
+	SELECT COUNT(*)
+	FROM [dbo].[WRK_VehiclesCompany]
+
+	SELECT *
+	FROM [dbo].[WRK_VehiclesCompany]
+
+	SELECT COUNT(*)
+	FROM [dbo].[RAW_VehiclesCompany_20200601]
+
+	SELECT TOP (100) *
+	FROM [dbo].[RAW_VehiclesCompany_20200601]
+*/

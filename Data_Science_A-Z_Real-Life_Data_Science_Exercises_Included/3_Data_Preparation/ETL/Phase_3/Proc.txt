@@ -1,0 +1,126 @@
+USE [DSTRAINING]
+GO
+/****** Object:  StoredProcedure [dbo].[BLD_WRK_NamesCanada]    Script Date: 2020-05-31 3:56:25 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[BLD_WRK_NamesCanada]
+-- =============================================
+-- Author:		Matheus Henrique Schaly
+-- Create date: 20200531
+-- Description:	RAW -> WRK
+-- Mod date:
+-- =============================================
+
+AS
+BEGIN
+
+-- =============================================
+-- DROP TABLE
+-- =============================================
+IF OBJECT_ID('WRK_NamesCanada') IS NOT NULL
+DROP TABLE [WRK_NamesCanada]
+
+-- =============================================
+-- CREATE TABLE
+-- =============================================
+
+CREATE TABLE [WRK_NamesCanada]
+(
+	[RowNumber]			INT IDENTITY(1,1)
+	,[Number]			VARCHAR(100)
+	,[Gender]			VARCHAR(6)
+	,[GivenName]		VARCHAR(1000)
+	,[Surname]			VARCHAR(1000)
+	,[StreetAddress]	VARCHAR(1000)
+	,[City]				VARCHAR(1000)
+	,[ZipCode]			VARCHAR(7)
+	,[CountryFull]		VARCHAR(1000)
+	,[Birthday]			DATE
+	,[Balance]			FLOAT
+	,[InterestRate]		FLOAT
+)
+
+-- =============================================
+-- TRUNCATE TABLE
+-- =============================================
+TRUNCATE TABLE [WRK_NamesCanada]
+
+-- =============================================
+-- INSERT INTO
+-- =============================================
+INSERT INTO [WRK_NamesCanada]
+(
+	[Number]
+	,[Gender]
+	,[GivenName]
+	,[Surname]
+	,[StreetAddress]
+	,[City]
+	,[ZipCode]
+	,[CountryFull]
+	,[Birthday]
+	,[Balance]
+	,[InterestRate]
+)
+SELECT
+	[Number]
+	,[Gender]
+	,[GivenName]
+	,[Surname]
+	,[StreetAddress]
+	,[City]
+	,[ZipCode]
+	,[CountryFull]
+	,[Birthday]
+	,[Balance]
+	,[InterestRate]
+FROM [RAW_NamesCanada_20200531]
+--(199986 rows affected)
+WHERE ISNUMERIC([Balance]) = 1  --10 ROWS EXCLUDED
+AND LEN([ZipCode]) <= 7			--2 ROWS EXCLUDED
+AND ISDATE([Birthday]) = 1		--2 ROWS EXCLUDED
+--199986 + 10 + 2 + 2 = 200000 VERIFIED
+
+-- =============================================
+-- ADDITIONAL EXCLUSIONS
+-- =============================================
+DELETE
+FROM [WRK_NamesCanada]
+WHERE [Balance] < 0
+--(1 row affected)
+
+DELETE
+FROM [WRK_NamesCanada]
+WHERE [ZipCode] NOT LIKE '___ ___'
+--(4 rows affected)
+
+SELECT *
+FROM [WRK_NamesCanada]
+WHERE [Birthday] < '1914-01-01'
+--N/A
+
+SELECT *
+FROM [WRK_NamesCanada]
+WHERE [Birthday] > '2006-01-01'
+--N/A
+
+
+
+END
+
+/*
+	SELECT COUNT(*)
+	FROM [dbo].[WRK_NamesCanada]
+
+	SELECT *
+	FROM [dbo].[WRK_NamesCanada]
+
+	SELECT COUNT(*)
+	FROM [dbo].[RAW_NamesCanada_20200531]
+
+	SELECT *
+	FROM [dbo].[RAW_NamesCanada_20200531]
+*/
