@@ -1,0 +1,1351 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0219.0753                               -->
+<workbook source-build='2020.1.0 (20201.20.0219.0753)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Churn Modelling (P12-Churn-Modelling)' inline='true' name='federated.1vt73g61fu826y1d1v2qv043jexx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='P12-Churn-Modelling' name='excel-direct.07svfne1o7u2sf18on18z1fyaq5u'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Matheus_Schaly/Documents/Courses/Data_Science_A-Z/Part_1_Data_Visualisation/3_Tableau_Advanced_Data_Mining/P12-Churn-Modelling.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.07svfne1o7u2sf18on18z1fyaq5u' name='Churn Modelling' table='[&apos;Churn Modelling$&apos;]' type='table'>
+          <columns gridOrigin='A1:N10001:no:A1:N10001:0' header='yes' outcome='6'>
+            <column datatype='integer' name='RowNumber' ordinal='0' />
+            <column datatype='integer' name='CustomerId' ordinal='1' />
+            <column datatype='string' name='Surname' ordinal='2' />
+            <column datatype='integer' name='CreditScore' ordinal='3' />
+            <column datatype='string' name='Geography' ordinal='4' />
+            <column datatype='string' name='Gender' ordinal='5' />
+            <column datatype='integer' name='Age' ordinal='6' />
+            <column datatype='integer' name='Tenure' ordinal='7' />
+            <column datatype='real' name='Balance' ordinal='8' />
+            <column datatype='integer' name='NumOfProducts' ordinal='9' />
+            <column datatype='integer' name='HasCrCard' ordinal='10' />
+            <column datatype='integer' name='IsActiveMember' ordinal='11' />
+            <column datatype='real' name='EstimatedSalary' ordinal='12' />
+            <column datatype='integer' name='Exited' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>RowNumber</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RowNumber]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>RowNumber</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CustomerId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CustomerId]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>CustomerId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Surname</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Surname]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Surname</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CreditScore</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CreditScore]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>CreditScore</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geography</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Geography]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Geography</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RCA_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tenure</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tenure]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Tenure</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Balance]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Balance</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumOfProducts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumOfProducts]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>NumOfProducts</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HasCrCard</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HasCrCard]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>HasCrCard</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IsActiveMember</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IsActiveMember]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>IsActiveMember</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EstimatedSalary</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[EstimatedSalary]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>EstimatedSalary</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Exited</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Exited]</local-name>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias>Exited</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Churn Modelling]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:N10001:no:A1:N10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Age]' peg='0' size='5' />
+      </column>
+      <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+      <column caption='LastDigitOfCustId' datatype='string' name='[Calculation_781656068271341569]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='Right(STR([CustomerId]),1)' />
+      </column>
+      <column datatype='integer' name='[CustomerId]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Stayed' />
+          <alias key='1' value='Exited' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Geography]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' name='[HasCrCard]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='No' />
+          <alias key='1' value='Yes' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[IsActiveMember]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='No' />
+          <alias key='1' value='Yes' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[NumOfProducts]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[RowNumber]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.527687' measure-ordering='alphabetic' measure-percentage='0.472313' show-aliased-fields='true' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Age'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Age]' peg='0' size='5' />
+            </column>
+            <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Age (bin):ok]' value='58' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#e1d5ca</color>
+                <color>#d1bca7</color>
+                <color>#c2a487</color>
+                <color>#b28e6b</color>
+                <color>#a37951</color>
+                <color>#93663a</color>
+                <color>#835527</color>
+                <color>#744517</color>
+                <color>#64360a</color>
+                <color>#552a00</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk] + [federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2])</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Age (bin):ok]</cols>
+      </table>
+      <simple-id uuid='{6B4C4A01-92A1-4E8D-A594-16C0BFDB56F5}' />
+    </worksheet>
+    <worksheet name='Age Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Age]' peg='0' size='5' />
+            </column>
+            <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Age (bin):ok]' value='54' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#e0d5ca</color>
+                <color>#d0bba7</color>
+                <color>#c0a386</color>
+                <color>#b08d69</color>
+                <color>#a07850</color>
+                <color>#906539</color>
+                <color>#805326</color>
+                <color>#704316</color>
+                <color>#603409</color>
+                <color>#502800</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:1]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#e0d5ca</color>
+                <color>#d0bba7</color>
+                <color>#c0a386</color>
+                <color>#b08d69</color>
+                <color>#a07850</color>
+                <color>#906539</color>
+                <color>#805326</color>
+                <color>#704316</color>
+                <color>#603409</color>
+                <color>#502800</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:1]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='458' />
+                <format attr='maxheight' value='458' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1vt73g61fu826y1d1v2qv043jexx].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{C7E543D9-2246-4BEA-B908-2E7D96A9883C}' />
+    </worksheet>
+    <worksheet name='Country'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Geography]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Geography]' derivation='None' name='[none:Geography:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Geography:nk]' value='91' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Geography:nk]</cols>
+      </table>
+      <simple-id uuid='{CC9302E0-D260-4CF6-B087-D1C7D96A306B}' />
+    </worksheet>
+    <worksheet name='Gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Gender:nk]' value='99' />
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Gender:nk]</cols>
+      </table>
+      <simple-id uuid='{3511AE7B-5DB0-4751-9D3A-414EB35F384D}' />
+    </worksheet>
+    <worksheet name='HasCrCard'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[HasCrCard]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='No' />
+                <alias key='1' value='Yes' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[HasCrCard]' derivation='None' name='[none:HasCrCard:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:HasCrCard:ok]' value='88' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:HasCrCard:ok]</cols>
+      </table>
+      <simple-id uuid='{0604E475-CFAA-4FA4-8C82-3A5CB1CCCD9E}' />
+    </worksheet>
+    <worksheet name='IsActiveMember'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[IsActiveMember]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='No' />
+                <alias key='1' value='Yes' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[IsActiveMember]' derivation='None' name='[none:IsActiveMember:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:IsActiveMember:ok]' value='101' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='380' />
+                <format attr='maxheight' value='380' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:IsActiveMember:ok]</cols>
+      </table>
+      <simple-id uuid='{6DC1C0EE-8E2A-4917-A440-C6AC9CCDE633}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column datatype='string' name='[Geography]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Geography]' derivation='None' name='[none:Geography:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[Longitude (generated)]' field-type='quantitative' max='3217640.0850120261' min='-3163073.3619779623' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[Latitude (generated)]' field-type='quantitative' max='7401284.3561580032' min='4269645.8324019248' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+              <lod column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Geography:nk]' />
+              <geometry column='[federated.1vt73g61fu826y1d1v2qv043jexx].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='12' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='400' />
+                <format attr='maxheight' value='400' />
+                <format attr='minwidth' value='815' />
+                <format attr='maxwidth' value='815' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[Latitude (generated)]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{076EE16E-D0FB-492D-B7BD-701148D392DB}' />
+    </worksheet>
+    <worksheet name='NumOfProducts'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[NumOfProducts]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[NumOfProducts]' derivation='None' name='[none:NumOfProducts:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:NumOfProducts:ok]' value='39' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:NumOfProducts:ok]' value='93' />
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='372' />
+                <format attr='maxheight' value='372' />
+                <format attr='minwidth' value='372' />
+                <format attr='maxwidth' value='372' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:NumOfProducts:ok]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>Low observations in last 2 categories</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.247312'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:NumOfProducts:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>3</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.83266129032258063'>
+                  <node-reference>
+                    <axis>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.698925'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:NumOfProducts:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>4</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.56451612903225801'>
+                  <node-reference>
+                    <axis>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{46AB9F63-E4BA-4929-9C46-C45D08E3B643}' />
+    </worksheet>
+    <worksheet name='Validation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Churn Modelling (P12-Churn-Modelling)' name='federated.1vt73g61fu826y1d1v2qv043jexx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vt73g61fu826y1d1v2qv043jexx'>
+            <column caption='LastDigitOfCustId' datatype='string' name='[Calculation_781656068271341569]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='Right(STR([CustomerId]),1)' />
+            </column>
+            <column datatype='integer' name='[CustomerId]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Exited]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Stayed' />
+                <alias key='1' value='Exited' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_781656068271341569]' derivation='None' name='[none:Calculation_781656068271341569:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Exited]' derivation='None' name='[none:Exited:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' value='p0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' />
+              <text column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' value='0.20000000000000001' value-column='[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='372' />
+                <format attr='maxheight' value='372' />
+                <format attr='minwidth' value='372' />
+                <format attr='maxwidth' value='372' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vt73g61fu826y1d1v2qv043jexx].[pcto:sum:Number of Records:qk:2]</rows>
+        <cols>[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Calculation_781656068271341569:nk]</cols>
+      </table>
+      <simple-id uuid='{152E8A9F-A08B-457F-9D80-1F860F7D2816}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{425F0746-29D8-4CC8-B030-AB468D536A66}' />
+    </window>
+    <window class='worksheet' name='Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{22F2D8F6-1590-40D7-B0C4-3FA3B8BF2216}' />
+    </window>
+    <window class='worksheet' name='Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B1C418E8-F322-4DE2-9C8B-46EC9337E5A8}' />
+    </window>
+    <window class='worksheet' name='HasCrCard'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C95EFFF4-EB86-4FEB-A50E-066D6314883C}' />
+    </window>
+    <window class='worksheet' name='IsActiveMember'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C5FA4CA-21E0-468C-8357-16F060B6019B}' />
+    </window>
+    <window class='worksheet' name='NumOfProducts'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7CFF147F-8792-4C38-A062-09D6AF91CF94}' />
+    </window>
+    <window class='worksheet' name='Validation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BE9CB230-2DB3-49EA-A7CA-3C515968A663}' />
+    </window>
+    <window class='worksheet' name='Age Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D6C02BB6-50FB-4AFA-AB5E-84F7D293328A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='1' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[none:Exited:ok]' type='color' />
+            <card pane-specification-id='2' param='[federated.1vt73g61fu826y1d1v2qv043jexx].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6DD13155-AF9F-4C04-9C0B-EC92E444EEF6}' />
+    </window>
+  </windows>
+</workbook>
