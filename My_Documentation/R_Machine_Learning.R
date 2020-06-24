@@ -271,6 +271,9 @@ classifier = svm(formula = Purchased ~ .,
                  type = 'C-classification',
                  kernel = 'kernel_name')
 
+# Predicting
+y_pred = predict(regressor, newdata = data.frame(x_col_name = predict_value))
+
 # Evaluating the model
 cm = table(test_set[, 3], y_pred)
 diag = diag(cm)
@@ -325,3 +328,248 @@ plot(set[, -3],
 contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+## Naive Bayes
+
+# Needs feature scaling
+# Non-linear (unless if using the linear kernel)
+# Continuous
+
+# Encoding the label as factor
+dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
+
+# Creating the model
+library(e1071)
+classifier = naiveBayes(x = training_set[-3],
+                        y = training_set$Purchased)
+
+# Predicting
+y_pred = predict(regressor, newdata = data.frame(x_col_name = predict_value))
+
+# Evaluating the model
+cm = table(test_set[, 3], y_pred)
+diag = diag(cm)
+rowsums = apply(cm, 1, sum)
+colsums = apply(cm, 2, sum)
+accuracy = sum(diag) / sum(cm)
+precision = diag / colsums
+recall = diag / rowsums
+f1 = 2 * precision * recall / (precision + recall)
+data.frame(accuracy, precision, recall, f1) # Look at the positive class when dealing with binary classification
+
+# Alternative way
+cm = table(test_set[, 3], y_pred)
+tn = cm[1]
+fn = cm[2]
+fp = cm[3]
+tp = cm[4]
+n = sum(cm)
+accuracy = (tp + tn) / n
+precision = tp / (tp + fp)
+recall = tp / (tp + fn)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+# Visualising the Training set results
+library(ElemStatLearn)
+set = training_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('x_col_name_1', 'x_col_name_2')
+y_grid = predict(classifier, newdata = grid_set)
+plot(set[, -3],
+     main = 'SVM (Training set)',
+     xlab = 'x_col_name_1', ylab = 'x_col_name_2',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+# Visualising the Test set results
+library(ElemStatLearn)
+set = test_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('x_col_name_1', 'x_col_name_2')
+y_grid = predict(classifier, newdata = grid_set)
+plot(set[, -3],
+     main = 'SVM (Test set)',
+     xlab = 'x_col_name_1', ylab = 'x_col_name_2',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+## Decision Tree
+
+# No need for feature scaling
+# Non-linear
+# Non-continuous
+
+# Encoding the label as factor
+dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
+
+# Creating the model
+library(rpart)
+dt = rpart(formula = Purchased ~ .,
+           data = training_set)
+
+# Predicting
+y_pred = predict(dt, newdata = test_set[-3], type = 'class')
+
+# Evaluating the model
+cm = table(test_set[, 3], y_pred)
+diag = diag(cm)
+rowsums = apply(cm, 1, sum)
+colsums = apply(cm, 2, sum)
+accuracy = sum(diag) / sum(cm)
+precision = diag / colsums
+recall = diag / rowsums
+f1 = 2 * precision * recall / (precision + recall)
+data.frame(accuracy, precision, recall, f1) # Look at the positive class when dealing with binary classification
+
+# Alternative way
+cm = table(test_set[, 3], y_pred)
+tn = cm[1]
+fn = cm[2]
+fp = cm[3]
+tp = cm[4]
+n = sum(cm)
+accuracy = (tp + tn) / n
+precision = tp / (tp + fp)
+recall = tp / (tp + fn)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+# Visualising the Training set results
+library(ElemStatLearn)
+set = training_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('x_col_name_1', 'x_col_name_2')
+y_grid = predict(classifier, newdata = grid_set)
+plot(set[, -3],
+     main = 'SVM (Training set)',
+     xlab = 'x_col_name_1', ylab = 'x_col_name_2',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+# Visualising the Test set results
+library(ElemStatLearn)
+set = test_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('x_col_name_1', 'x_col_name_2')
+y_grid = predict(classifier, newdata = grid_set)
+plot(set[, -3],
+     main = 'SVM (Test set)',
+     xlab = 'x_col_name_1', ylab = 'x_col_name_2',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+# Plotting the decision tree
+plot(classifier)
+text(classifier)
+
+## Random Forest
+
+# No need for feature scaling
+# Non-linear
+# Non-continuous
+
+# Encoding the label as factor
+dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
+
+# Creating the model
+library(randomForest)
+rf = randomForest(x = training_set[-3],
+                  y = training_set$Purchased,
+                  ntree = 20)
+
+# Predicting
+y_pred = predict(dt, newdata = test_set[-3], type = 'class')
+
+# Evaluating the model
+cm = table(test_set[, 3], y_pred)
+diag = diag(cm)
+rowsums = apply(cm, 1, sum)
+colsums = apply(cm, 2, sum)
+accuracy = sum(diag) / sum(cm)
+precision = diag / colsums
+recall = diag / rowsums
+f1 = 2 * precision * recall / (precision + recall)
+data.frame(accuracy, precision, recall, f1) # Look at the positive class when dealing with binary classification
+
+# Alternative way
+cm = table(test_set[, 3], y_pred)
+tn = cm[1]
+fn = cm[2]
+fp = cm[3]
+tp = cm[4]
+n = sum(cm)
+accuracy = (tp + tn) / n
+precision = tp / (tp + fp)
+recall = tp / (tp + fn)
+f1 = 2 * (precision * recall) / (precision + recall)
+
+# Visualising the Training set results
+library(ElemStatLearn)
+set = training_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('Age', 'EstimatedSalary')
+y_grid = predict(rf, newdata = grid_set, type = 'class')
+plot(set[, -3],
+     main = 'Random Forest Classification (Training set)',
+     xlab = 'Age', ylab = 'Estimated Salary',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+# Visualising the Test set results
+library(ElemStatLearn)
+set = test_set
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
+grid_set = expand.grid(X1, X2)
+colnames(grid_set) = c('Age', 'EstimatedSalary')
+y_grid = predict(rf, newdata = grid_set, type = 'class')
+plot(set[, -3], main = 'Random Forest Classification (Test set)',
+     xlab = 'Age', ylab = 'Estimated Salary',
+     xlim = range(X1), ylim = range(X2))
+contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
+points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
+points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
+
+# k-Means
+
+# Elbow method
+set.seed(6)
+wcss = vector()
+for (i in 1:10) wcss[i] <- sum(kmeans(X, i)$withinss)
+plot(1:10, wcss, type = "b", main = paste('Clusters of clients'), xlab = 'Number of clusters', ylab = 'Number of clusters')
+
+# Building the final model
+set.seed(29)
+kmeans = kmeans(X, 5, iter.max = 300, nstart = 10)
+
+# Visualizing the clusters
+library(cluster)
+clusplot(X,
+         kmeans$cluster,
+         lines = 0,
+         shade = TRUE,
+         color = TRUE,
+         plotchar = FALSE,
+         main = paste('Clusters of clinets'),
+         xlab = 'Annual Income',
+         ylab = 'Spending Score')
+
