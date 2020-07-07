@@ -551,7 +551,7 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 # k-Means
 
-# Elbow method
+# Using the elbow method to find the optimal number of clusters
 set.seed(6)
 wcss = vector()
 for (i in 1:10) wcss[i] <- sum(kmeans(X, i)$withinss)
@@ -573,3 +573,159 @@ clusplot(X,
          xlab = 'Annual Income',
          ylab = 'Spending Score')
 
+# Hierarchical Clustering
+
+# Using the dendrogram to find the optimal number of clusters
+dendrogram = hclust(dist(X, method='euclidean'), method = 'ward.D')
+
+plot(dendrogram,
+     main = paste('Dendogram'),
+     xlab = 'Customers',
+     ylab = 'Euclidean distances')
+
+# Fitting hierarchical clustering to the mall dataset
+hc = hclust(dist(X, method='euclidean'), method = 'ward.D')
+y_hc = cutree(hc, 5)
+
+# Visualizing the clusters
+library(cluster)
+clusplot(X,
+         y_hc,
+         lines = 0,
+         shade = TRUE,
+         color = TRUE,
+         plotchar = FALSE,
+         main = paste('Clusters of clinets'),
+         xlab = 'Annual Income',
+         ylab = 'Spending Score')
+
+# Apriori
+
+# Converting the dataset into a sparse matrix
+# install.packages('arules')
+library(arules)
+dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE)
+summary(dataset)
+itemFrequencyPlot(dataset, topN = 10)
+
+# Training Apriori on the dataset
+rules = apriori(data = dataset, parameter = list(support = 0.004, confidence = 0.2))
+
+# Visualising the results
+inspect(sort(rules, by = 'lift')[1:10])
+
+# Eclat
+
+# Converting the dataset into a sparce matrx
+# install.packages('arules')
+library(arules)
+dataset = read.transactions('Market_Basket_Optimisation.csv', sep=',', rm.duplicates = TRUE)
+summary(dataset)
+itemFrequencyPlot(dataset, topN = 10)
+
+# Training Eclat on the dataset
+rules = eclat(data = dataset, parameter = list(support = 0.004, minlen=1))
+
+# Visualising the reulsts
+inspect(sort(rules, by='support')[1:10])
+
+# Upper confidence bound
+
+# Implementing UCB
+N = 10000
+d = 10
+ads_selected = integer()
+numbers_of_selections = integer(d)
+sums_of_rewards = integer(d)
+total_reward = 0
+
+for (n in 1:N) {
+  ad = 0
+  max_upper_bound = 0
+  for (i in 1:d) {
+    if (numbers_of_selections[i] > 0) {
+      average_reward = sums_of_rewards[i] / numbers_of_selections[i]
+      delta_i = sqrt(3/2 * log(n) / numbers_of_selections[i])
+      upper_bound = average_reward + delta_i
+    } else {
+      upper_bound = 1e400
+    }
+    if (upper_bound > max_upper_bound) {
+      max_upper_bound = upper_bound
+      ad = i
+    }
+  }
+  ads_selected = append(ads_selected, ad)
+  numbers_of_selections[ad] = numbers_of_selections[ad] + 1
+  reward = dataset[n, ad]
+  sums_of_rewards[ad] = sums_of_rewards[ad] + reward
+  total_reward = total_reward + reward
+}
+
+# Visualising the results
+hist(ads_selected,
+     col = 'blue',
+     main = 'Histogram of ads selections',
+     xlab = 'Ads',
+     ylab = 'Number of times each ad was selected by the algorithm')
+
+# Thompson sampling
+
+# Implementing Thompson Sampling
+N = 10000
+d = 10
+ads_selected = integer()
+number_of_rewards_1 = integer(d)
+number_of_rewards_0 = integer(d)
+total_reward = 0
+
+for (n in 1:N) {
+  ad = 0
+  max_random_beta = 0
+  for (i in 1:d) {
+    random_beta = rbeta(n = 1,
+                        shape1 = number_of_rewards_1[i] + 1,
+                        shape2 = number_of_rewards_0[i] + 1)
+    if (random_beta > max_random_beta) {
+      max_random_beta = random_beta
+      ad = i
+    }
+  }
+  ads_selected = append(ads_selected, ad)
+  reward = dataset[n, ad]
+  if (reward == 1) {
+    number_of_rewards_1[ad] = number_of_rewards_1[ad] + 1
+  } else {
+    number_of_rewards_0[ad] = number_of_rewards_0[ad] + 1
+  }
+  total_reward = total_reward + reward
+}
+
+# Visualising the results
+hist(ads_selected,
+     col = 'blue',
+     main = 'Histogram of ads selections',
+     xlab = 'Ads',
+     ylab = 'Number of times each ad was selected by the algorithm')
+
+# Natural Language Processing
+
+# Importing the dataset
+dataset_original = read.csv('Restaurant_Reviews.tsv', sep = '\t', quote = '', stringsAsFactors = FALSE)
+
+# Cleaning the texts
+# install.packages('tm')
+library(tm)
+corpus = VCorpus(VectorSource(dataset_original$Review))
+corpus = tm_map(corpus, content_transformer(tolower))
+corpus = tm_map(corpus, removeNumbers)
+corpus = tm_map(corpus, removePunctuation)
+corpus = tm_map(corpus, removeWords, stopwords())
+corpus = tm_map(corpus, stemDocument)
+corpus = tm_map(corpus, stripWhitespace)
+
+# Creating the Bag of Words model
+dtm = DocumentTermMatrix(corpus)
+dtm = removeSparseTerms(dtm, 0.999)
+dataset = as.data.frame(as.matrix(dtm))
+dataset$Liked = dataset_original$Liked
