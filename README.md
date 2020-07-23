@@ -41,7 +41,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 **Data Preprocessing**
 * Missing Data
-* Class Imbalace
+* Class Imbalance
 * Categorical Data Encoding
 * Feature Scaling
 
@@ -59,7 +59,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * Extreme Gradient Boosting Regressor
 * Logistic Regression Classifier
 * k-Nearest Neighbors Classifier
-* Support Vecotr Classifier
+* Support Vector Classifier
 * Decision Tree Classifier
 * Random Forest Classifier
 * Extreme Gradient Boosting Classifier
