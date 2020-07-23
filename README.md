@@ -6,7 +6,7 @@ Each course contains the source codes alongside with the datasets used. Each cou
 
 The Machine Learning Toolkit folder contains a well-organized summary of the code that I have been learning during my studies.
 
-# Main Topics
+# Topics
 
 **Languages**
 * Python
