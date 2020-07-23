@@ -1,6 +1,6 @@
 # Summary
 
-Here are some of the online curses I have been doing.
+Here are some of the online courses I have been doing.
 
 Each course contains the source codes alongside with the datasets used. Each course also has some videos that explain the source code as well as the concepts. Keep in mind though that the videos are not meant to teach anything to anyone, they were just recorded so that I could get a better grasp of the material.
 
