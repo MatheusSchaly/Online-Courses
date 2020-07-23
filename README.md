@@ -39,6 +39,8 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 **Exploratory Data Analysis**
 
+**Feature Engineering**
+
 **Data Preprocessing**
 * Missing Data
 * Class Imbalance
