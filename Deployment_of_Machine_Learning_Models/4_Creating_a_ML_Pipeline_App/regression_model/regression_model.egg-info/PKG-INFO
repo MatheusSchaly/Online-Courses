@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: regression-model
+Version: 0.1.0
+Summary: Train and deploy regression model.
+Home-page: your github project
+Author: Your name
+Author-email: your_email@email.com
+License: MIT
+Description: Train and deploy regression model.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
