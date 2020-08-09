@@ -13,7 +13,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * R
 * SQL
 
-**Libraries**
+**Machine Learning Libraries**
 * Python
 	* Scikit-Learn
 	* TensorFlow
@@ -127,6 +127,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * Microsoft SQL Server Management Studio
 	* Scripts in SQL
 	* Stored Procedures in SQL
+
+**Big Data**
+* Library: PySpark
 
 **Machine Learning Pipeline**
 
