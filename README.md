@@ -127,3 +127,54 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * Microsoft SQL Server Management Studio
 	* Scripts in SQL
 	* Stored Procedures in SQL
+
+**Machine Learning Pipeline**
+
+**Research Environment**
+
+**Production Environment**
+
+**Machine Learning System Architecture**
+* Train by batch, predict on the fly, serve via REST API
+
+**Production Code Types**
+* Procedural Programming
+* Custom Pipeline
+* Scikit-Learn Pipeline
+
+**Version Control**
+* Platform: GitHub
+
+**Virtual Environments**
+* Library: Tox
+
+**Versioning**
+
+**Logging**
+
+**Testing**
+* Library: Pytest
+
+**Differential Testesting**
+* Library: Pytest
+
+**Data Validation**
+* Library: Marshmallow
+
+**Model Deployment via a REST API**
+* Library: Flask
+
+**Packaging**
+* Libraries: Setuptools, Wheel
+* Container: Docker
+* Repository: Gemfury
+
+**Continuous Integration / Continuous Delivery**
+* Platform: CircleCI
+
+**Deployment Environment**
+* Platform as a Service
+	* Platform: Heroku
+* Infrastructure as a Service
+	* Platform: AWS ECS - AWS ECR
+		* Launch Type: EC2 and Fargate
