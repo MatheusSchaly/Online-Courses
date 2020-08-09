@@ -145,7 +145,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 **Version Control**
 * Platform: GitHub
 
-**Virtual Environments**
+**Virtual Environment**
 * Library: Tox
 
 **Versioning**
