@@ -155,7 +155,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 **Testing**
 * Library: Pytest
 
-**Differential Testesting**
+**Differential Testing**
 * Library: Pytest
 
 **Data Validation**
