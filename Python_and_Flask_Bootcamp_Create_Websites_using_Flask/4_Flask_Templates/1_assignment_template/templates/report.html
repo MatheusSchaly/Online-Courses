@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="jumbotron">
+    <p>Let's see how you performed!!</p>
+    <p>Passed is {{passed}}</p>
+
+    {% if passed %}
+      <p>Your username passed the 3 requirements</p>
+      <img src="../static/puppy_pic.jpg" alt="Image not found">
+    {% else %}
+      <p>Oh no! Looks like you had issues with your username!</p>
+      <p>Here are the requirements you failed:</p>
+      <ul>
+        {% if not has_upper %}
+          <li>You did not use an uppercase character.</li>
+        {% endif %}
+        {% if not has_lower %}
+          <li>You did not use a lowercase character.</li>
+        {% endif %}
+        {% if not num_at_end %}
+          <li>You did not end your username with a number.</li>
+        {% endif %}
+      </ul>
+    {% endif %}
+
+  </div>
+{% endblock %}
