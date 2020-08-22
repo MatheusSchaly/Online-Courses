@@ -1,6 +1,6 @@
-My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62CcYVQdT73S6FRwlg1E3qG
-
 Course: https://www.udemy.com/course/datascience/
+
+My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62CcYVQdT73S6FRwlg1E3qG
 
 # Topics Covered
 
