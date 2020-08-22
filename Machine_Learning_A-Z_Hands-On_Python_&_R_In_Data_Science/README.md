@@ -65,7 +65,7 @@ Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql
 * Eclat
 
 **Natural Language Processing**
-* Bag of Words and TF-IDF
+* Bag of Words
 
 **Deep Learning**
 * Deep Feed Forward Neural Network
