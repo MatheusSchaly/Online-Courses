@@ -1,5 +1,7 @@
 Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql3FA0B-3I1X4zkO-s
 
+Course: https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+
 # Topics Covered
 
 **Python**
