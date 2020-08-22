@@ -1,4 +1,6 @@
-Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61nn4Dg-cfkN_30ekZFweDx
+My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61nn4Dg-cfkN_30ekZFweDx
+
+Course link: https://www.udemy.com/course/deployment-of-machine-learning-models/
 
 # Topics Covered
 
