@@ -1,5 +1,33 @@
-All Machine Learning videos: https://www.youtube.com/playlist?list=PLXpWIYsri-60Y5Az4JnRhFJ2FoSkfxzZT
-
-All Data Science videos: https://www.youtube.com/playlist?list=PLXpWIYsri-63rFLJ0q-hPogwniHoLEg20
-
 Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61tcRzgHYtqZcEqaEpOcbMa
+
+# Topics Covered
+
+**Python**
+* PySpark
+
+**Big Data**
+
+**Exploratory Data Analysis**
+
+**Data Preprocessing**
+* Missing Data
+* Categorical Data Encoding
+* Feature Scaling
+
+**Model Evaluation**
+
+**Supervised Learning**
+* Linear Regression
+* Logistic Regression
+* Decision Tree
+* Random Forest
+
+**Unsupervised Learning**
+* k-Means
+
+**Recommender System**
+
+**Natural Language Processing**
+* Bag of Words and TF-IDF
+
+**Spark Streaming**
