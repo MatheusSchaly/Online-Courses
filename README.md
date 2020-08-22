@@ -10,9 +10,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ##  Machine Learning A-Z Hands-On Python & R In Data Science
 
-### Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql3FA0B-3I1X4zkO-s
-
 ### Course: https://www.udemy.com/course/machinelearning/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql3FA0B-3I1X4zkO-s
 
 **Python**
 * Scikit-Learn
@@ -102,9 +102,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ## Python for Data Science and Machine Learning Bootcamp
 
-### Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql3FA0B-3I1X4zkO-s
-
 ### Course: https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-6139Qql3FA0B-3I1X4zkO-s
 
 **Python**
 * Scikit-Learn
@@ -179,9 +179,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ## Spark and Python for Big Data with PySpark
 
-### Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61tcRzgHYtqZcEqaEpOcbMa
-
 ### Course: https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61tcRzgHYtqZcEqaEpOcbMa
 
 **Python**
 * PySpark
@@ -216,9 +216,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ## Data Science A-Z Real-Life Data Science Exercises Included
 
-### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62CcYVQdT73S6FRwlg1E3qG
-
 ### Course: https://www.udemy.com/course/datascience/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62CcYVQdT73S6FRwlg1E3qG
 
 **Data Visualization** Tableau
 
@@ -250,9 +250,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ## Deployment of Machine Learning Models
 
-### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61nn4Dg-cfkN_30ekZFweDx
-
 ### Course: https://www.udemy.com/course/deployment-of-machine-learning-models/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61nn4Dg-cfkN_30ekZFweDx
 
 **Python**
 * Scikit-Learn
@@ -331,9 +331,9 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 
 ## Python and Flask Bootcamp Create Websites using Flask
 
-### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62px2Wr_YgZhLWBI5tS9EZ2
-
 ### Course: https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/
+
+### My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62px2Wr_YgZhLWBI5tS9EZ2
 
 **Python**
 
