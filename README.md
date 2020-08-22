@@ -6,36 +6,30 @@ Each course contains the source codes alongside with the datasets used. Each cou
 
 The Machine Learning Toolkit folder contains a well-organized summary of the code that I have been learning during my studies.
 
-# Topics
+# Topics separated by course
 
-**Languages**
-* Python
-* R
-* SQL
+##  Machine Learning A-Z Hands-On Python & R In Data Science
 
-**Machine Learning Libraries**
-* Python
-	* Scikit-Learn
-	* TensorFlow
-	* PySpark
-	* Numpy
-	* Pandas
-	* Matplotlib
-	* Seaborn
-	* Cufflinks
-	* Plotly
-* R
-	* caTools
-	* caret
-	* ggplot2
-	* e1071
-	* rpart
-	* ElemStatLearn
-	* class
-	* cluster
-	* arules
-	* tm
-	* MASS
+**Python**
+* Scikit-Learn
+* TensorFlow
+* Numpy
+* Pandas
+* Matplotlib
+* Seaborn
+
+**R**
+* caTools
+* caret
+* ggplot2
+* e1071
+* rpart
+* ElemStatLearn
+* class
+* cluster
+* arules
+* tm
+* MASS
 
 **Exploratory Data Analysis**
 
@@ -79,15 +73,7 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * Eclat
 
 **Natural Language Processing**
-* Bag of Words and TF-IDF
-
-**Recommender System**
-* Content Based
-* Collaborative Filtering 
-	* Memory-Based 
-		* User-Based
-		* Item-Based
-	* Model-Based
+* Bag of Words
 
 **Deep Learning**
 * Deep Feed Forward Neural Network
@@ -108,14 +94,124 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 	* Principal Component Analysis
 	* Kernel Principal Component Analysis
 	* Linear Discriminant Analysis
-	
-**Working with People**
-* Communication
-* Presentations
 
-**Tableau**
 
-**Microsoft Excel**
+## Python for Data Science and Machine Learning Bootcamp
+
+**Python**
+* Scikit-Learn
+* TensorFlow
+* PySpark
+* Numpy
+* Pandas
+* Matplotlib
+* Seaborn
+* Cufflinks
+* Plotly
+* PySpark
+
+**Exploratory Data Analysis**
+
+**Data Preprocessing**
+* Missing Data
+* Class Imbalance
+* Feature Engineering
+* Categorical Data Encoding
+* Feature Scaling
+
+**Hyperparameter Tuning**
+
+**Model Evaluation**
+
+**Supervised Learning**
+* Simple Linear Regression
+* Multiple Linear Regression
+* Logistic Regression
+* k-Nearest Neighbors
+* Decision Tree
+* Random Forest
+* Support Vector Machine
+
+**Unsupervised Learning**
+* k-Means
+* Principal Component Analysis
+
+**Recommender System**
+* Content Based
+* Collaborative Filtering 
+	* Memory-Based 
+		* User-Based
+		* Item-Based
+	* Model-Based
+
+**Natural Language Processing**
+* Bag of Words and TF-IDF
+
+**Deep Learning**
+* Deep Feed Forward Neural Network
+
+**Dimensionality Reduction**
+* Feature Selection
+	* Filter Method
+		* Variance Threshold
+		* Chi-Square Test
+		* Correlation Threshold
+	* Wrapper Method
+		* Backward Elimination
+		* Recursive Feature Elimination
+	* Embedded Method
+		* LassoCV
+* Feature Extraction
+	* Principal Component Analysis
+	* Kernel Principal Component Analysis
+	* Linear Discriminant Analysis
+
+**Big Data**
+
+
+## Spark and Python for Big Data with PySpark
+
+**Python**
+* PySpark
+
+**Big Data**
+
+**Exploratory Data Analysis**
+
+**Data Preprocessing**
+* Missing Data
+* Categorical Data Encoding
+* Feature Scaling
+
+**Model Evaluation**
+
+**Supervised Learning**
+* Linear Regression
+* Logistic Regression
+* Decision Tree
+* Random Forest
+
+**Unsupervised Learning**
+* k-Means
+
+**Recommender System**
+
+**Natural Language Processing**
+* Bag of Words and TF-IDF
+
+**Spark Streaming**
+
+
+## Data Science A-Z Real-Life Data Science Exercises Included
+
+**Data Visualization** Tableau
+
+**Statistical Package** Gretl
+* Simple Linear Regression
+* Multiple Linear Regression
+* Logistic Regression
+
+**Data Visualization and Analysis:** Microsoft Excel
 
 **Extract Transform Load**
 * Data Cleaning
@@ -127,9 +223,38 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 * Microsoft SQL Server Management Studio
 	* Scripts in SQL
 	* Stored Procedures in SQL
+* Error Handling
 
-**Big Data**
-* Library: PySpark
+**SQL**
+
+**Working with People**
+* Communication
+* Presentations
+
+
+## Deployment of Machine Learning Models
+
+**Python**
+* Scikit-Learn
+* TensorFlow
+* Numpy
+* Pandas
+* Matplotlib
+
+**Data Preprocessing**
+* Missing Data
+* Class Imbalance
+* Feature Engineering
+* Categorical Data Encoding
+* Feature Scaling
+
+**Model Evaluation**
+
+**Supervised Learning**
+* Lasso
+
+**Deep Learning**
+* Convolutional Neural Network
 
 **Machine Learning Pipeline**
 
@@ -178,6 +303,35 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 **Deployment Environment**
 * Platform as a Service
 	* Platform: Heroku
+		* WSGI HTTP Server: Gunicorn 
 * Infrastructure as a Service
 	* Platform: AWS ECS - AWS ECR
 		* Launch Type: EC2 and Fargate
+
+
+## Python and Flask Bootcamp Create Websites using Flask
+
+**Python**
+
+**HTML**
+
+**CSS**
+
+**Bootstrap4**
+
+**Flask**
+* Templating: Jinja
+* Forms: WTForms
+* Object Relational Mapper: Flank-SQLAlchemy
+* Database Migration: Flask-Migrate
+* User Authentication:
+	* Hashing: Bcrypt
+	* Hashing: Werkszeug
+	* Login: Flask-Login
+	* Open Authorization: Flask-Dance
+* REST API: Flask-Restful
+* Testing: Postman
+* API Authorization: Flask-JWT
+* Deployment: Heroku
+	* WSGI HTTP Server: Gunicorn 
+* Online Payment Processing: Stripe
