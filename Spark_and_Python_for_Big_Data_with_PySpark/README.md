@@ -1,6 +1,6 @@
-Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61tcRzgHYtqZcEqaEpOcbMa
-
 Course: https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/
+
+My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61tcRzgHYtqZcEqaEpOcbMa
 
 # Topics Covered
 
