@@ -1,4 +1,6 @@
-Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62px2Wr_YgZhLWBI5tS9EZ2
+My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62px2Wr_YgZhLWBI5tS9EZ2
+
+Course: https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/
 
 # Topics Covered
 
