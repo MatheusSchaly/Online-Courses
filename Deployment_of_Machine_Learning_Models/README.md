@@ -71,6 +71,7 @@ Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-61nn4Dg
 **Deployment Environment**
 * Platform as a Service
 	* Platform: Heroku
+		* WSGI HTTP Server: Gunicorn 
 * Infrastructure as a Service
 	* Platform: AWS ECS - AWS ECR
 		* Launch Type: EC2 and Fargate
