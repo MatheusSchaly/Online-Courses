@@ -2,14 +2,14 @@ Course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62CcYVQ
 
 # Topics Covered
 
-**Data Visualization: Tableau**
+**Data Visualization** Tableau
 
-**Statistical Package: Gretl**
-* Supervised Machine Learning: Simple Linear Regression
-* Supervised Machine Learning: Multiple Linear Regression**
-* Supervised Machine Learning: Logistic Regression**
+**Statistical Package** Gretl
+* Simple Linear Regression
+* Multiple Linear Regression
+* Logistic Regression
 
-**Data Visualization and Analysis: Microsoft Excel**
+**Data Visualization and Analysis:** Microsoft Excel
 
 **Extract Transform Load**
 * Data Cleaning
