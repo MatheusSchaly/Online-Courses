@@ -26,5 +26,5 @@ My course-specific videos: https://www.youtube.com/playlist?list=PLXpWIYsri-62px
 * Testing: Postman
 * API Authorization: Flask-JWT
 * Deployment: Heroku
-	* WSGI HTTP Server: Gunicorn 
+	* WSGI HTTP Server: Gunicorn
 * Online Payment Processing: Stripe
