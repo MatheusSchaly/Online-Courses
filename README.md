@@ -111,7 +111,6 @@ The Machine Learning Toolkit folder contains a well-organized summary of the cod
 **Python**
 * Scikit-Learn
 * TensorFlow
-* PySpark
 * Numpy
 * Pandas
 * Matplotlib
